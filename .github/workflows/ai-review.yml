@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: AI PR Review
-        uses: JanSirPROXx/gpt-pr-bot@v1
+        uses: JanSirPROXx/gpt-pr-bot@@master
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           # optional:
