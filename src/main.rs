@@ -48,6 +48,8 @@ fn main() {
         )
         .unwrap();
 
+        //this is a random change to test the ai pr bot
+
         //get key input
         if crossterm::event::poll(std::time::Duration::from_millis(0)).unwrap()
             && let crossterm::event::Event::Key(key_event) = crossterm::event::read().unwrap()
