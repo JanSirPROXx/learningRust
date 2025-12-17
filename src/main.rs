@@ -40,8 +40,6 @@ fn main() {
             .unwrap();
         }
 
-        //test review bot
-
         // draw fruit
         crossterm::execute!(
             std::io::stdout(),
