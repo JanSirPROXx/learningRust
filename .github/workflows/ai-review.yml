@@ -1,0 +1,24 @@
+name: AI Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: AI PR Review
+        uses: JanSirPROXx/gpt-pr-bot@v1
+        with:
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          # optional:
+          # model: gpt-4.1-mini
+          # review_file: Review.md
+          # max_files: "20"
